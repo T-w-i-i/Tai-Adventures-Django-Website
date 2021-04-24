@@ -1,0 +1,445 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TaiAdventures</title>
+<!-- Stylesheets -->
+
+<link href="{% static 'TaiApp/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'TaiApp/css/style.css'%}" rel="stylesheet">
+<link href="{% static 'TaiApp/css/responsive.css'%}" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="{%static 'TaiApp/images/TaiLogonew.jpg'%}" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+
+
+  <!-- Main Header-->
+  <header class="main-header header-style-four">
+
+      <!-- Header Lower  -->
+    <div class="header-lower">
+        <div class="auto-container">
+            <div class="outer-container clearfix">
+        <!-- Logo Box -->
+        <div class="pull-left logo-box">
+          <div class="logo"><a href="{% url 'TaiApp:home' %}"><img src="{%static 'TaiApp/images/TaiLogonew.jpg'%}" alt="" title="" width="200" height="300"></a></div>
+        </div>
+        <!-- Nav Outer -->
+                  <div class="nav-outer clearfix">
+          <!-- Main Menu -->
+          <nav class="main-menu navbar-expand-md">
+            <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+              <ul class="navigation clearfix">
+                <li ><a href="{% url 'TaiApp:home' %}">Home</a>
+
+                </li>
+                <li><a href="#about">About Us</a>
+
+                </li>
+                <li><a href="{% url 'TaiApp:packages' %}">Packages</a>
+
+
+                <li><a href="{% url 'TaiApp:book' %}">book</a></li>
+              </ul>
+            </div>
+
+          </nav>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+
+  </header>
+  <!--End Main Header -->
+
+	<!--Main Slider-->
+    <section class="main-slider style-three">
+        <div class="main-slider-carousel owl-carousel owl-theme">
+
+            <div class="slide" style="background-image:url({% static 'TaiApp/images/big5wall.jpg'%});height: 293px;">
+                <div class="auto-container">
+
+                </div>
+            </div>
+
+            <div class="slide" style="background-image:url({% static 'TaiApp/images/big5wall.jpg'%});height: 293px;">
+                <div class="auto-container">
+
+                </div>
+            </div>
+
+        </div>
+	</section>
+
+
+
+
+
+
+
+  <!-- Services Section Ten -->
+	<section class="services-section-ten style-two">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title centered">
+				<div class="title">Real Experiences, Great Memories</div>
+				<h2>BIG GAME EXPERIENCE: Maasai Mara, Amboseli , Tsavo East And West National Park</h2>
+			</div>
+      <!--Sidebar Page Container-->
+        <div class="sidebar-page-container">
+          <div class="auto-container">
+              <div class="row clearfix">
+
+            <!--Sidebar Side-->
+                    <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                      <aside class="sidebar default-sidebar">
+
+
+
+                <!-- Contact Widget-->
+                            <div class="sidebar-widget contact-widget">
+                              <div class="sidebar-title">
+                                    <h4>Contact</h4>
+                                </div>
+                  <ul>
+                    <li><span class="icon flaticon-map-1"></span> Nairobi <br> Nairobi</li>
+                    <li><span class="icon flaticon-phone-receiver"></span> +254712345678 <br> +254712345678</li>
+                    <li><span class="icon flaticon-comment"></span> support@taiadventures.com</li>
+                  </ul>
+                </div>
+
+                <!-- Brochures Widget-->
+                <div class="sidebar-widget brochures-widget">
+                  <div class="sidebar-title">
+                        <h4>Terms and Conditions</h4>
+                    </div>
+      <div class="text">1.After consultation with our team, you are to book a preferred safari with the required date of travel.<br>
+2.To confirm the booking a deposit of 30% is to be  paid via bank to facilitate in further bookings such as accommodation. With the remaining 70% to be paid upon arravial.
+<br>3.A payment receipt and booking voucher shall be sent to confirm the booking and payment has been received.
+<br>4.Airport pick up on arrival date shall be facilitated by the company on request from the client and shall be provided on the arriving date and time.
+<br>5.Inclusive safari experience as agreed and indicated on the itinerary with transport,accommodation with full board meals all catered for, and park entry fee.
+<br>6. Airport drop off on the departure date after the safari.
+<br>7. Any other request not agreed upon on the itinenary will be charged depending on the request being made.</div>
+
+    </div>
+
+
+                <!-- Banner Widget-->
+                            <div class="sidebar-widget banner-widget">
+                  <div class="widget-content" style="background-image:url(images/resource/service-15.jpg)">
+                    <div class="logo">
+                      <img src="{%static 'TaiApp/images/TaiLogonew.jpg'%}" alt="" />
+                    </div>
+                    <div class="title">Real Experiences, Great Memories</div>
+                    <h2>Tai Adventures</h2>
+                    <a href="{% url 'TaiApp:book' %}" class="theme-btn btn-style-seventen">Book Now<span class="icon flaticon-direction"></span></a>
+                  </div>
+                </div>
+
+              </aside>
+            </div>
+
+            <!--Content Side-->
+                    <div class="content-side col-lg-8 col-md-12 col-sm-12">
+                      <div class="services-single">
+
+                <div class="text">
+
+                  <h5><b>Arrival in Nairobi</b><br>
+The safari will start immediately you land at the airport where you are picked up and dropped at your hotel of choice, you will have a rest as you feel the beautiful ambiance of the famously known City under the Sun. Briefing with the guide who will share information and familiarizing with what to expect during the safari. Nairobi excursion afford upon request.
+<br><br><b>DAY 1: NAIROBI – MASAAI MARA RESERVE.</b>
+Departure starts early after breakfast heading for Narok via the Nairobi Mai Mahiu road, along the way you will be able to see the different types of settlement from urban set up to rural houses. Across the road lays vast tea plantations, savanna grasslands and sisal plantation as you approach Narok County the home to wildlife. Arrive in Mara late afternoon for check in and have an evening drive in the reserve on lookout for the Big 5(Buffalo, Elephant, Leopard, Lion and Rhino). Return to the lodge at sunset for dinner with the magnificent sunset on the savanna grassland.
+Dinner & Overnight at Lodge<br>
+Meal Plans: (Lunch & Dinner)
+<br><br><b>DAY 2: MARA RESERVE FULL DAY DRIVE</b>
+Early game drive after breakfast across the reserve which is famously known for the wildebeest migration across the Serengeti and Mara Reserve which make it’s the Seventh Wonder of the World. More than 1.3 Million wildebeest migrate making it a kill season for the carnivores including the crocodiles in Mara River. The savanna grassland and plantations of leafy bushes is food for millions ranging from elephants, antelopes, buffaloes, giraffes, wildebeest, zebra and the black rhino. Following these the predators have plenty to hunt and you won’t miss a hunt or meal session from the carnivores which include lions, leopards, cheetahs, hyenas, wild dogs, jackals and foxes. Lunch will be picnic packed lunch at the Mara River as you enjoy the sights and sounds as the migration takes place.
+Dinner & Overnight at Lodge<br>
+Meal Plans: (Breakfast, Lunch & Dinner)
+<br><br><b>DAY 3: MARA RESERVE FULL DAY DRIVE</b>
+After breakfast embark for game drive across the vast Mara triangle which is bordered by Ngamia Hills to the East Side with leafy bushes which are liked by black rhinos which are thriving in the reserve. Search for game hunting and in search of preys across the grasslands, the park is also an important birding area which is home to various bird species like vultures, secretary birds, marabou stork, big raptors, kori bustards, and guinea fowl including many others. Have late lunch as picnic in the reserve as you are on lookout for wildlife and return for overnight at the lodge late in the evening.
+Dinner & Overnight at Lodge<br>
+Meal Plans: (Breakfast, Lunch & Dinner)
+<br><br><b>DAY 4: MASAAI MARA – AMBOSELI NATIONAL PARK</b>
+Late breakfast after which check out from lodge driving through the reserve, with a short stop at the masaai village which we shall do upon your request  as we head for Amboseli. It will be a long drive and this gives the best experience for scenic viewing, architectural designs from the rural and urban settlements along the way. Arrive late in the evening for Amboseli for a late game drive if time allows and fatigue from the journey.
+Dinner & Overnight at Lodge<br>
+Meal Plans: (Breakfast, Lunch & Dinner)
+<br><br><b>DAY 5: AMBOSELI FULL DAY DRIVE</b>
+Wake up to the amazing view of the snow- capped Mount Kilimanjaro which stands as the tallest mountain in Africa, after breakfast head for game watching in the fascinating mosaic of swamps, salt licks, acacia forest and grasslands that is food for wildlife. This includes elephants, gazelles, giraffes, zebras, antelopes, buffaloes including many others. In search of the Big 5 (Buffaloes, Elephants, Leopards, Lions but no rhinos) other predators include the cheetah, hyena and wild dogs. The park is rich with bird species and this is good for bird watching. Late lunch followed by evening drive after which you break for the night.
+Dinner & Overnight at Lodge<br>
+Meal Plans: (Breakfast, Lunch & Dinner)
+<br><br><b>DAY 6: AMBOSELI – TSAVO WEST NATIONAL PARK</b>
+At dawn drive to Tsavo National Park after breakfast arriving late in the afternoon for an evening game drive in the park with the beautiful view of Chyulu Hills and Mount Kilimanjaro. Inside the park are beautiful landmarks such as shetani lava flow that erupted 500 years ago, Poachers Lookout, Ngulia rhino sanctuary and the roaring rocks. The park has a rich history of the famous “Man Eaters of Tsavo” making game viewing interesting in search for the big 5 (Buffaloes, Elephants, Leopards, Lions and Rhinos) making it interesting for the drive and wildlife watching.
+Dinner & Overnight at Lodge<br>
+Meal Plans: (Breakfast, Lunch & Dinner)
+<br><br><b>DAY 7: TSAVO WEST- TAVO EAST NATIONAL PARK</b>
+Early morning drive through Tsavo West heading to Tsavo West National Park for a  game drive in such for the red elephants of Tsavo and game ranging from lions, leopards, cheetahs, rhinos and zebras including others such as birds and prey. The Lugard water falls from Athi River through the park and the Yatta Plateau one of the world’s longest lava flow and enjoy sundowners with the beautiful scenic view of the Tsavo. From the drive and wildlife watching embark for overnight at the lodge.
+Dinner & Overnight at Lodge<br>
+Meal Plans: (Breakfast, Lunch & Dinner)
+<br><br><b>DAY 8: TSAVO EAST – NAIROBI</b>
+Late breakfast as you enjoy the beautiful scenic view of the vast savanna bush land with melodies from the rich birdlife species in the park as you check out of the lodge heading for Nairobi.
+Arrive in Nairobi late in the evening with drop off at your hotel of choice or airport as this mark the END of the Safari.
+Meal Plans: (Breakfast & Lunch)<br><br>
+
+
+
+
+
+
+
+<b>Charges Include : </b><br>
+Transport for the entire safari in a 4 × 4 tour van with an opening roof. This also pick includes up and drop off at the airport.<br>
+Full board accommodation during the safari.<br>
+All meals as indicated on the meal plan table.<br>
+Park entry fee and game drive with a professional tour guide<br>
+Tour facilitator<br>
+All Government taxes<br>
+Mineral water during the safari.<br><br>
+<b>Charges Exclude</b><br>
+Tips<br>
+Drinks within the bar<br>
+Any request during the safari<br>
+Any request not indicated on the itinerary.<br><br>
+<br><br>
+
+<b>Thank You for choosing to travel with us.</b>
+</h5>
+                </div>
+
+                <!-- Services Gallery -->
+                <div class="services-gallery">
+                  <div class="services-carousel owl-carousel owl-theme">
+                    <div class="slide">
+                      <div class="image">
+                        <img src="{% static 'TaiApp/images/Elephantmaasai.jpeg'%}" style="height : 300px" alt="">
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="image">
+                        <img src="{% static 'TaiApp/images/Tsavo2.jpg'%}" style="height : 300px" alt="">
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="image">
+                        <img src="{% static 'TaiApp/images/Tsavo3.jpg'%}" style="height : 300px" alt="">
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="image">
+                        <img src="{% static 'TaiApp/images/Tsavo4.jpg'%}" style="height : 300px" alt="">
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="image">
+                        <img src="{% static 'TaiApp/images/maasaimaragame.jpg'%}" style="height : 300px" alt="">
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="image">
+                        <img src="{% static 'TaiApp/images/Maasaimaragiraffe.jpg'%}" style="height : 300px" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Services Info Tabs-->
+
+
+
+                <!-- More Services -->
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--End Sidebar Page Container-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</section>
+	<!-- End Services Section Ten -->
+
+
+
+
+
+
+
+
+
+
+
+	<!--Sponsors Section-->
+
+	<!--End Sponsors Section-->
+
+  	<!--Main Footer-->
+      <footer class="main-footer style-two">
+      	<div class="auto-container">
+          	<!--Widgets Section-->
+              <div class="widgets-section">
+              	<div class="row clearfix">
+
+                      <!--Column-->
+                      <div class="big-column col-lg-6 col-md-12 col-sm-12">
+  						<div class="row clearfix">
+
+                          	<!--Footer Column-->
+                              <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                  <div class="footer-widget logo-widget">
+  									<div class="logo">
+  										<a href="index.html"><img src="{%static 'TaiApp/images/icons/eagle4.png'%}" alt="" /></a>
+  									</div>
+  									<div class="text" style="color: green;">Real Experiences, Great Memories</div>
+
+  								</div>
+  							</div>
+
+  							<!--Footer Column-->
+                              <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                  <div class="footer-widget links-widget">
+  									<p style="color : green;">Services We Offer</p>
+  									<ul class="list-link">
+  										<li><a href="">Travel Consultation</a></li>
+  										<li><a href="">Kenya Safari Packages</a></li>
+  										<li><a href="">Hotel Bookings</a></li>
+  										<li><a href="">Flight Bookings</a></li>
+  										<li><a href="">SGR Ticket Booking</a></li>
+  										<li><a href="">Honey packages</a></li>
+  									</ul>
+  								</div>
+  							</div>
+
+  						</div>
+  					</div>
+
+  					<!--Column-->
+                      <div class="big-column col-lg-6 col-md-12 col-sm-12">
+  						<div class="row clearfix">
+
+                          	<!--Footer Column-->
+                              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                  <div class="footer-widget links-widget">
+  									<p style="color: green;">Quick Links</p>
+  									<ul class="list-link">
+  										<li><a href="">Our Packages</a></li>
+  										<li><a href="">Contact us</a></li>
+  										<li><a href="">About Us</a></li>
+  										<li><a href="">Big Game Experience</a></li>
+
+  									</ul>
+  								</div>
+  							</div>
+
+  							<!--Footer Column-->
+                              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                  <div class="footer-widget gallery-widget">
+
+  									<div class="widget-content">
+  										<div class="images-outer clearfix">
+  											<!--Image Box-->
+                        <img src="{%static 'TaiApp/images/TaiLogonew.jpg'%}" alt="" />
+
+  										</div>
+  									</div>
+  								</div>
+  							</div>
+
+  						</div>
+  					</div>
+
+  				</div>
+  			</div>
+  		</div>
+  		<!-- Footer Bottom -->
+  		<div class="footer-bottom">
+  			<div class="auto-container">
+  				<div class="row clearfix">
+
+  					<!-- Copyright Column -->
+  					<div class="copyright-column col-lg-6 col-md-6 col-sm-12">
+  						<div class="copyright">2019 &copy; All rights reserved by <a href="#">TaiAdventures | Created By Nawiri Capital</a> </div>
+
+  					</div>
+
+  					<!-- Social Column -->
+  					<div class="social-column col-lg-6 col-md-6 col-sm-12">
+  						<ul>
+  							<li class="follow">Follow us: </li>
+  							<li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-twitter-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-google-plus-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-rss-square"></span></a></li>
+  						</ul>
+  					</div>
+
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+
+</div>
+<!--End pagewrapper-->
+
+<script src="{% static 'TaiApp/js/jquery.js' %}"></script>
+<script src="{% static 'TaiApp/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'TaiApp/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'TaiApp/js/jquery.fancybox.js'% }"></script>
+<script src="{% static 'TaiApp/js/appear.js'%}"></script>
+<script src="{% static 'TaiApp/js/owl.js'%}"></script>
+<script src="{% static 'TaiApp/js/wow.js'%}"></script>
+<script src="{% static 'TaiApp/js/jquery-ui.js'%}"></script>
+<script src="{% static 'TaiApp/js/main.js'%}"></script>
+
+<!--Google Map APi Key-->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+<script src="{% static 'TaiApp/js/map-script.js'%}"></script>
+<!--End Google Map APi-->
+
+</body>
+</html>

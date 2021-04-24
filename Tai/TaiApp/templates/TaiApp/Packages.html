@@ -1,0 +1,457 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TaiAdventures</title>
+<!-- Stylesheets -->
+
+<link href="{% static 'TaiApp/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'TaiApp/css/style.css'%}" rel="stylesheet">
+<link href="{% static 'TaiApp/css/responsive.css'%}" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="{%static 'TaiApp/images/TaiLogonew.jpg'%}" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+
+
+  <!-- Main Header-->
+  <header class="main-header header-style-four">
+
+      <!-- Header Lower  -->
+    <div class="header-lower">
+        <div class="auto-container">
+            <div class="outer-container clearfix">
+        <!-- Logo Box -->
+        <div class="pull-left logo-box">
+          <div class="logo"><a href="{% url 'TaiApp:home' %}"><img src="{%static 'TaiApp/images/TaiLogonew.jpg'%}" alt="" title="" width="200" height="300"></a></div>
+        </div>
+        <!-- Nav Outer -->
+                  <div class="nav-outer clearfix">
+          <!-- Main Menu -->
+          <nav class="main-menu navbar-expand-md">
+            <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+              <ul class="navigation clearfix">
+                <li ><a href="{% url 'TaiApp:home' %}">Home</a>
+
+                </li>
+                <li><a href="#about">About Us</a>
+
+                </li>
+                <li><a href="{% url 'TaiApp:packages' %}">Packages</a>
+
+
+                <li><a href="{% url 'TaiApp:book' %}">book</a></li>
+              </ul>
+            </div>
+
+          </nav>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+
+  </header>
+  <!--End Main Header -->
+
+	<!--Main Slider-->
+    <section class="main-slider style-three">
+        <div class="main-slider-carousel owl-carousel owl-theme">
+
+            <div class="slide" style="background-image:url({% static 'TaiApp/images/maasaimaragame.jpg'%});height: 293px;">
+                <div class="auto-container">
+
+                </div>
+            </div>
+
+            <div class="slide" style="background-image:url({% static 'TaiApp/images/maasaimaragame.jpg'%});height: 293px;">
+                <div class="auto-container">
+
+                </div>
+            </div>
+
+        </div>
+	</section>
+
+
+
+
+
+
+
+  <!-- Services Section Ten -->
+	<section class="services-section-ten style-two">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title centered">
+				<div class="title">Real Experiences, Great Memories</div>
+				<h2>Packages</h2>
+			</div>
+			<div class="row clearfix">
+
+        <!-- Services Block Fifteen -->
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/NairobiNew.jpg'%}" style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/NairobiNew.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:nairobi' %}">Nairobi City Tour</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+        <!-- Services Block Fifteen -->
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/Big5K.jpg'%}" style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/Elephantmaasai.jpeg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:big5' %}">Big Game Experience</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Services Block Fifteen -->
+				<div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/birdwatching.jpg'%}" style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/birdwatching.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:bird' %}">5 Days Of Bird Watchers Paradise</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Services Block Fifteen -->
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/Tai1.jpg'%}" style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/Tai1.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:beach' %}">Best Of Elephant Sanctuary and Beach</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- Services Block Fifteen -->
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/Tai6.jpg'%}"style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/Tai6.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:night' %}">2 Days Maasai Mara Safari(Overnight)</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/maasaimara3day.jpg'%}" style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/maasaimara3day.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:mara' %}">3 Days Maasai Mara Experience</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/amboseli.jpg'%}" style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/amboseli.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:maraSix' %}">6 Days at Maasai Mara, Lake Nakuru and Amboseli</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/maasaimarareserve.jpg'%}" style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/maasaimarareserve.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:maraSeven' %}">7 Days at Maasai Mara Reserve</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="{% static 'TaiApp/images/nairobinational.jpg'%}" style="height: 250px;" alt="">
+							<div class="overlay-box">
+								<a href="{% static 'TaiApp/images/nairobinational.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<div class="upper-box">
+
+								<h4><a href="{% url 'TaiApp:nairobipark' %}">Nairobi National Park, Giraffe Center and Animal Orphanage</a></h4>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Services Block Fifteen -->
+        <div class="services-block-fifteen col-lg-4 col-md-6 col-sm-12">
+          <div class="inner-box wow bounceIn" data-wow-delay="0ms" data-wow-duration="1500ms">
+            <div class="image">
+              <img src="{% static 'TaiApp/images/LakeNakuru.jpg'%}" style="height: 250px;" alt="">
+              <div class="overlay-box">
+                <a href="{% static 'TaiApp/images/LakeNakuru.jpg'%}" data-fancybox="service-2" data-caption="" class="plus flaticon-plus-symbol"></a>
+              </div>
+            </div>
+            <div class="lower-content">
+              <div class="upper-box">
+
+                <h4><a href="{% url 'TaiApp:nakuru' %}">4 Days Maasai Mara and Lake Nakuru</a></h4>
+              </div>
+
+            </div>
+          </div>
+        </div>
+			</div>
+		</div>
+	</section>
+	<!-- End Services Section Ten -->
+
+
+
+
+
+
+
+
+
+
+
+	<!--Sponsors Section-->
+
+	<!--End Sponsors Section-->
+
+
+  	<!--Main Footer-->
+      <footer class="main-footer style-two">
+      	<div class="auto-container">
+          	<!--Widgets Section-->
+              <div class="widgets-section">
+              	<div class="row clearfix">
+
+                      <!--Column-->
+                      <div class="big-column col-lg-6 col-md-12 col-sm-12">
+  						<div class="row clearfix">
+
+                          	<!--Footer Column-->
+                              <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                  <div class="footer-widget logo-widget">
+  									<div class="logo">
+  										<a href="index.html"><img src="{%static 'TaiApp/images/icons/eagle4.png'%}" alt="" /></a>
+  									</div>
+  									<div class="text" style="color: green;">Real Experiences, Great Memories</div>
+
+  								</div>
+  							</div>
+
+  							<!--Footer Column-->
+                              <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                  <div class="footer-widget links-widget">
+  									<p style="color : green;">Services We Offer</p>
+  									<ul class="list-link">
+  										<li><a href="">Travel Consultation</a></li>
+  										<li><a href="">Kenya Safari Packages</a></li>
+  										<li><a href="">Hotel Bookings</a></li>
+  										<li><a href="">Flight Bookings</a></li>
+  										<li><a href="">SGR Ticket Booking</a></li>
+  										<li><a href="">Honey packages</a></li>
+  									</ul>
+  								</div>
+  							</div>
+
+  						</div>
+  					</div>
+
+  					<!--Column-->
+                      <div class="big-column col-lg-6 col-md-12 col-sm-12">
+  						<div class="row clearfix">
+
+                          	<!--Footer Column-->
+                              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                  <div class="footer-widget links-widget">
+  									<p style="color: green;">Quick Links</p>
+  									<ul class="list-link">
+  										<li><a href="">Our Packages</a></li>
+  										<li><a href="">Contact us</a></li>
+  										<li><a href="">About Us</a></li>
+  										<li><a href="">Big Game Experience</a></li>
+
+  									</ul>
+  								</div>
+  							</div>
+
+  							<!--Footer Column-->
+                              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                  <div class="footer-widget gallery-widget">
+
+  									<div class="widget-content">
+  										<div class="images-outer clearfix">
+  											<!--Image Box-->
+                        <img src="{%static 'TaiApp/images/TaiLogonew.jpg'%}" alt="" />
+
+  										</div>
+  									</div>
+  								</div>
+  							</div>
+
+  						</div>
+  					</div>
+
+  				</div>
+  			</div>
+  		</div>
+  		<!-- Footer Bottom -->
+  		<div class="footer-bottom">
+  			<div class="auto-container">
+  				<div class="row clearfix">
+
+  					<!-- Copyright Column -->
+  					<div class="copyright-column col-lg-6 col-md-6 col-sm-12">
+  						<div class="copyright">2021 &copy; All rights reserved by <a href="#">TaiAdventures | Created By Nawiri Capital</a> </div>
+
+  					</div>
+
+  					<!-- Social  							<li class="follow">Follow us: </li>
+  							<li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-twitter-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-google-plus-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-rss-square"></span></a></li> Column -->
+  					<div class="social-column col-lg-6 col-md-6 col-sm-12">
+  						<ul>
+  							       <li class="follow">Follow us: </li>
+  							<li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-twitter-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-google-plus-square"></span></a></li>
+  							<li><a href="#"><span class="fa fa-rss-square"></span></a></li>
+  						</ul>
+  					</div>
+
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+
+</div>
+<!--End pagewrapper-->
+
+<script src="{% static 'TaiApp/js/jquery.js' %}"></script>
+<script src="{% static 'TaiApp/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'TaiApp/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'TaiApp/js/jquery.fancybox.js'% }"></script>
+<script src="{% static 'TaiApp/js/appear.js'%}"></script>
+<script src="{% static 'TaiApp/js/owl.js'%}"></script>
+<script src="{% static 'TaiApp/js/wow.js'%}"></script>
+<script src="{% static 'TaiApp/js/jquery-ui.js'%}"></script>
+<script src="{% static 'TaiApp/js/main.js'%}"></script>
+
+<!--Google Map APi Key-->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+<script src="{% static 'TaiApp/js/map-script.js'%}"></script>
+<!--End Google Map APi-->
+
+</body>
+</html>

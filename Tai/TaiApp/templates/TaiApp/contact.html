@@ -1,0 +1,345 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Book - TaiAdventures</title>
+<!-- Stylesheets -->
+
+<link href="{% static 'TaiApp/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'TaiApp/css/style.css'%}" rel="stylesheet">
+<link href="{% static 'TaiApp/css/responsive.css'%}" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="{%static 'TaiApp/images/TaiLogonew.jpg'%}" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+<body>
+
+<div class="page-wrapper">
+
+
+
+  <!-- Main Header-->
+  <header class="main-header header-style-four">
+
+      <!-- Header Lower  -->
+    <div class="header-lower">
+        <div class="auto-container">
+            <div class="outer-container clearfix">
+        <!-- Logo Box -->
+        <div class="pull-left logo-box">
+          <div class="logo"><a href="{% url 'TaiApp:home' %}"><img src="{%static 'TaiApp/images/TaiLogonew.jpg'%}" alt="" title="" width="200" height="300"></a></div>
+        </div>
+        <!-- Nav Outer -->
+                  <div class="nav-outer clearfix">
+          <!-- Main Menu -->
+          <nav class="main-menu navbar-expand-md">
+            <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+              <ul class="navigation clearfix">
+                <li ><a href="{% url 'TaiApp:home' %}">Home</a>
+                </li>
+                <li><a href="#about">About Us</a>
+                </li>
+                <li><a href="{% url 'TaiApp:packages' %}">Packages</a>
+                <li><a href="{% url 'TaiApp:book' %}">book</a></li>
+              </ul>
+            </div>
+
+          </nav>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+
+  </header>
+  <!--End Main Header -->
+
+	<!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'TaiApp/images/maasaimaragame.jpg'%});height: 293px;">
+    	<div class="auto-container">
+			<div class="content">
+
+
+			</div>
+        </div>
+    </section>
+    <!--End Page Title-->
+{% if first_name %}
+<center>
+<h2>Thank You {{first_name}} for Choosing to travel with us!!</h2>
+<p> We have received your Email and we will be in touch in 1 Hour</p>
+</center>
+<br><br><br>
+{%else%}
+
+	<!-- Contact Page Section -->
+	<section class="contact-page-section">
+		<div class="map-section">
+			<!--Map Outer-->
+			<div class="map-outer">
+				<!--Map Canvas-->
+				<div class="map-canvas"
+					data-zoom="12"
+					data-lat="-37.817085"
+					data-lng="144.955631"
+					data-type="roadmap"
+					data-hue="#ffc400"
+					data-title="Envato"
+					data-icon-path="images/icons/map-marker.png"
+					data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
+				</div>
+			</div>
+		</div>
+		<div class="auto-container">
+			<div class="inner-container">
+				<h2>Book Your Experience with us!</h2>
+				<div class="row clearfix">
+
+					<!-- Info Column -->
+					<div class="info-column col-lg-7 col-md-12 col-sm-12">
+						<div class="inner-column">
+							<div class="text">Please contact us using the information below.</div>
+							<ul class="list-style-five">
+								<li>Tai Adventures, <br> Nairobi, <br> Kenya</li>
+								<li>(254)731961600 ,</li>
+								<li>adventurestai@gmail.com</li>
+							</ul>
+              <div class="social-column ">
+                <ul>
+                         <li class="follow">Follow us: </li>
+                  <li><a href="https://web.facebook.com/Tai-Adventures-103362431614397"><span class="fa fa-facebook-square fa-2x"></span></a></li>
+                  <li><a href="#"><span class="fa fa-twitter-square fa-2x"></span></a></li>
+                  <li><a href="https:/DropDowns/www.instagram.com/adventurestai/?hl=en"><span class="fa fa-instagram fa-2x"></span></a></li>
+
+                </ul>
+              </div>
+						</div>
+					</div>
+
+					<!-- Form Column -->
+					<div class="form-column col-lg-5 col-md-12 col-sm-12">
+						<div class="inner-column">
+
+							<!--Contact Form-->
+							<div class="contact-form">
+								<form method="post" action="{% url 'TaiApp:book' %}" id="contact-form">
+                  {% csrf_token %}
+
+									<div class="form-group">
+										<input type="text" name="firstname" value="" placeholder="Full name" required>
+									</div>
+
+									<div class="form-group">
+										<input type="text" name="email" value="" placeholder="Email" required>
+									</div>
+
+									<div class="form-group">
+										<select class="custom-select-box" name = "Packages">
+											<option>Select Package</option>
+											<option>Nairobi City Tour</option>
+											<option>Big Game Experience</option>
+                      <option>Bird Watchers Paradise</option>
+                      <option>Elephant Sancuary and Beach</option>
+                      <option>Maasai Mara Safari(Overnight)</option>
+                      <option>3 Days Maasai Mara Experience</option>
+                      <option>6 Days Maasai Mara,L.Nakuru and Amboseli</option>
+                      <option>7 Days at Maasai Mara Reserve</option>
+                      <option>Nairobi National Park and Giraffe Center</option>
+                      <option>4 Days at Maasai Mara and Lake Nakuru</option>
+										</select>
+									</div>
+
+									<div class="form-group">
+										<textarea name="Budget" placeholder="Are you interested in Budget Safari/ Mid Range Safari/ Luxury Safaris?"></textarea>
+									</div>
+
+									<div class="form-group">
+										<button type="submit" class="theme-btn">Submit</button>
+									</div>
+
+								</form>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Team Page Section -->
+
+	<!-- Contact Info Section -->
+	<section class="contact-info-section" style="background-image:url({% static 'TaiApp/images/amboseli.jpg'%});">
+		<div class="auto-container">
+			<div class="row clearfix">
+
+				<div class="column col-lg-4 col-md-6 col-sm-12">
+					<h4>Budget Safari</h4>
+					<p style="font-size: 18px;">This is a planned safari that favours tourist who are travelling on a budget or have made the last minute decision to travel. They get to share some of the amenities including the tour van making it a group safari with other tourists,accommodation in a tented camp</p>
+				</div>
+        <div class="column col-lg-4 col-md-6 col-sm-12">
+					<h4>Mid Range Safari</h4>
+					<p style="font-size: 18px;">This is a safari that can be customised for tourist travelling on a slightly higher budget safari but an upgrade of the accommodation or alternatively have a private van but budget accommodation.</p>
+				</div>
+        <div class="column col-lg-4 col-md-6 col-sm-12">
+					<h4>Luxury Safari</h4>
+					<p style="font-size: 18px;">This is an all exclusive and customised safari where the tourist gets to choose their favourable and preferred package,no sharing of tour van,making the safari private for the tourist.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- End Contact Info Section -->
+{% endif %}
+  <!--Main Footer-->
+    <footer class="main-footer style-two">
+      <div class="auto-container">
+          <!--Widgets Section-->
+            <div class="widgets-section">
+              <div class="row clearfix">
+
+                    <!--Column-->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+            <div class="row clearfix">
+
+                          <!--Footer Column-->
+                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                <div class="footer-widget logo-widget">
+                  <div class="logo">
+                    <a href="index.html"><img src="{%static 'TaiApp/images/icons/eagle4.png'%}" alt="" /></a>
+                  </div>
+                  <div class="text" style="color: green;">Real Experiences, Great Memories</div>
+
+                </div>
+              </div>
+
+              <!--Footer Column-->
+                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                <div class="footer-widget links-widget">
+                  <p style="color : green;">Services We Offer</p>
+                  <ul class="list-link">
+                    <li><a href="">Travel Consultation</a></li>
+                    <li><a href="">Kenya Safari Packages</a></li>
+                    <li><a href="">Hotel Bookings</a></li>
+                    <li><a href="">Flight Bookings</a></li>
+                    <li><a href="">SGR Ticket Booking</a></li>
+                    <li><a href="">Honey packages</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--Column-->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+            <div class="row clearfix">
+
+                          <!--Footer Column-->
+                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                <div class="footer-widget links-widget">
+                  <p style="color: green;">Quick Links</p>
+                  <ul class="list-link">
+                    <li><a href="">Our Packages</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Big Game Experience</a></li>
+
+                  </ul>
+                </div>
+              </div>
+
+              <!--Footer Column-->
+                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                <div class="footer-widget gallery-widget">
+
+                  <div class="widget-content">
+                    <div class="images-outer clearfix">
+                      <!--Image Box-->
+                      <img src="{%static 'TaiApp/images/TaiLogonew.jpg'%}" alt="" />
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="auto-container">
+        <div class="row clearfix">
+
+          <!-- Copyright Column -->
+          <div class="copyright-column col-lg-6 col-md-6 col-sm-12">
+            <div class="copyright">2021 &copy; All rights reserved by <a href="#">TaiAdventures | Created By Nawiri Capital</a> </div>
+
+          </div>
+
+          <!-- Social  							<li class="follow">Follow us: </li>
+              <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+              <li><a href="#"><span class="fa fa-twitter-square"></span></a></li>
+              <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+              <li><a href="#"><span class="fa fa-google-plus-square"></span></a></li>
+              <li><a href="#"><span class="fa fa-rss-square"></span></a></li> Column -->
+          <div class="social-column col-lg-6 col-md-6 col-sm-12">
+            <ul>
+                     <li class="follow">Follow us: </li>
+              <li><a href="https://web.facebook.com/Tai-Adventures-103362431614397"><span class="fa fa-facebook-square"></span></a></li>
+              <li><a href="#"><span class="fa fa-twitter-square"></span></a></li>
+              <li><a href="https://www.instagram.com/adventurestai/?hl=en"><span class="fa fa-instagram"></span></a></li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<!--End pagewrapper-->
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/main.js"></script>
+<!--Google Map APi Key-->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDTPlX-43R1TpcQUyWjFgiSfL_BiGxslZU"></script>
+<script src="js/map-script.js"></script>
+<!--End Google Map APi-->
+
+</body>
+</html>
